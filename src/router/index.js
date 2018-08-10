@@ -4,6 +4,7 @@ const Index = () =>
 	import('@/view/index/index');
 const Home = () =>
 	import('@/view/home/home');
+
 const Login = () =>
 	import('@/view/login/login');
 const Res = () =>
@@ -52,128 +53,124 @@ const ZhaoShang = () =>
 	import('@/view/about/zhaoshang');
 const ZhaoShangLogin = () =>
 	import('@/view/about/zhaoshanglogin');
-	const LiuCheng = () =>
+const LiuCheng = () =>
 	import('@/view/about/liucheng');
-	const Problem = () =>
+const Problem = () =>
 	import('@/view/about/problem');
+const Error = () =>
+	import('@/view/home/error');
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: '/yangcunProject/',
+	mode: 'history',
+	base: '/yangcunProject/',
 	routes: [{
-		path: '/',
-		component: Index,
-		children: [{
-				path: '',
-				name: 'home',
-				component: Home
-			},
-			{
-				path: '/activ',
-				component: Activ,
-				children: [{
+			path: '/',
+			component: Index,
+			children: [{
 					path: '',
-					name: 'huodong',
-					component: Huodong
+					name: 'home',
+					component: Home
+				},
+				{
+					path: '/activ',
+					component: Activ,
+					children: [{
+						path: '',
+						name: 'huodong',
+						component: Huodong
+					}, {
+						path: '/main',
+						component: Main
+					}, {
+						path: '/assit',
+						component: Assit
+					}, {
+						path: '/show',
+						component: Show
+					}]
+				},
+				{
+					path: '/res',
+					component: Res
+				},
+				{
+					path: '/booking',
+					component: Booking
+				},
+				{
+					path: '/yuding',
+					component: Yuding
+				},
+				{
+					path: '/gift',
+					component: Gift
 				}, {
-					path: '/main',
-					component: Main
+					path: '/order/:id',
+					component: Order
 				}, {
-					path: '/assit',
-					component: Assit
+					path: '/orderOk',
+					component: OrderOk
 				}, {
-					path: '/show',
-					component: Show
-				}]
-			},
-			{
-				path: '/res',
-				component: Res
-			},
-			{
-				path: '/booking',
-				component: Booking
-			},
-			{
-				path: '/yuding',
-				component: Yuding
-			},
-			{
-				path: '/gift',
-				component: Gift
-			},{
-				path:'/order/:id',
-				component:Order
-			}
-			,{
-				path:'/orderOk',
-				component:OrderOk
-			}
-			,{
-				path:'/orderConfirm',
-				component:OrderConfirm
-			}
-			,{
-				path:'/orderPay',
-				component:OrderPay
-			}
-			,{
-				path:'/personalHome',
-				component:PersonalHome,
-				children:[
-				 {
-					path: '',
-					name: 'personalXinx',
-					component: PersonalXinx
-				 },
-				 {
-					path: '/personalOrder',
-					component: PersonalOrder
-				 },
+					path: '/orderConfirm',
+					component: OrderConfirm
+				}, {
+					path: '/orderPay',
+					component: OrderPay
+				}, {
+					path: '/personalHome',
+					component: PersonalHome,
+					children: [{
+							path: '',
+							name: 'personalXinx',
+							component: PersonalXinx
+						},
+						{
+							path: '/personalOrder',
+							component: PersonalOrder
+						},
 
-				  {
-					path: '/personalWallet',
-					component: PersonalWallet
-				 },
-				  {
-					path: '/personalLy',
-					component: PersonalLy
-				 },
-				]
-			},{
-				path:'/findPass',
-				component : findPass
-			},{
-				path:'/about',
-				component : About,
-			},{
-				path:'/AboutContact',
-				component : AboutContact,
-			},{
-				path:'/zhaoshang',
-				component : ZhaoShang,
-			}
-			,{
-				path:'/zhaoshanglogin',
-				component : ZhaoShangLogin,
-			}
-			,{
-				path:'/liucheng',
-				component : LiuCheng,
-			},{
-				path:'/problem',
-				component :Problem,
-			}
-		]
+						{
+							path: '/personalWallet',
+							component: PersonalWallet
+						},
+						{
+							path: '/personalLy',
+							component: PersonalLy
+						},
+					]
+				}, {
+					path: '/findPass',
+					component: findPass
+				}, {
+					path: '/about',
+					component: About,
+				}, {
+					path: '/AboutContact',
+					component: AboutContact,
+				}, {
+					path: '/zhaoshang',
+					component: ZhaoShang,
+				}, {
+					path: '/zhaoshanglogin',
+					component: ZhaoShangLogin,
+				}, {
+					path: '/liucheng',
+					component: LiuCheng,
+				}, {
+					path: '/problem',
+					component: Problem,
+				}
+			]
 		},
 		{
 			path: '/login',
 			component: Login
 		},
-    {
-      path: '*',
-      component: error
-    }
-		]
+		{
+			path: '*',
+			name: 'error',
+			component: Error
+		}
+	]
 })

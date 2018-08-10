@@ -250,9 +250,20 @@
 }
 .nav-search ul li {
   display: none;
+ position: relative;
 }
 .nav-search ul li .banner-one {
   background: url(../../../static/img/index/yc_web_banner_01.jpg) no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  z-index: -1;
 }
 .nav-search ul li .banner-two {
   background: url(../../../static/img/index/yc_web_banner_02.jpg) no-repeat;
