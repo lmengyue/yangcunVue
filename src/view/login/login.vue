@@ -211,7 +211,7 @@
 				this.login="no";
 			},
 			qqLogin(){
-				window.location.href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101488974&redirect_uri=http%3a%2f%2fwww.yangvillage.com%2fmembers%2fsynclog.php&state=qq";
+				window.location.href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101488974&redirect_uri=http%3a%2f%2f104.zrpic.com%2fyangcun&state=qq";
 			}
 		},
 		beforeMount() {

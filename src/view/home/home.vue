@@ -1,19 +1,11 @@
 <template>
 	<div>
 			<div class="nav-search">
-				<ul>
-					<li style="display: block">
-						<router-link to="" class="banner-one banner"></router-link>
-					</li>
-					<li>
-						<router-link to="" class="banner-one banner"></router-link>
-					</li>
-					<li>
-						<router-link to="" class="banner-one banner"></router-link>
-					</li>
-				</ul>
-				<span class="left"></span>
-				<span class="right"></span>
+        <el-carousel :interval="5000" arrow="always">
+          <el-carousel-item v-for="item in banner" :key="item">
+            <div class="banner-item" :style="{backgroundImage: 'url('+item+')'}"></div>
+          </el-carousel-item>
+        </el-carousel>
 				<div class="search">
 					<span class="fasearch"></span>
 					<input type="search" name="" id="" placeholder="关键字/关键字/关键字" value="" />
@@ -171,8 +163,8 @@
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 				<button>查看更多</button>
 			</div>
 			<div class="info">
@@ -239,9 +231,34 @@
 </template>
 
 <script>
+  export default {
+    data() {
+      return {
+        banner: [
+          require('../../../static/img/index/yc_web_banner_01.jpg'),
+          require('../../../static/img/index/yc_web_banner_02.jpg'),
+          require('../../../static/img/index/yc_web_banner_03.jpg')
+        ]
+      }
+    },
+    methods: {
+
+    }
+  }
 </script>
 
 <style>
+  .el-carousel__container{
+    height: 600px;
+  }
+  .el-carousel__item{
+    height: 600px;
+  }
+  .el-carousel__item .banner-item{
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+  }
 		.nav-search {
   height: 596px;
   position: relative;
@@ -261,8 +278,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  -webkit-filter: blur(12px);
-  filter: blur(12px);
+  /*-webkit-filter: blur(2px);*/
+  /*filter: blur(2px);*/
   z-index: -1;
 }
 .nav-search ul li .banner-two {
@@ -311,6 +328,7 @@
   margin-left: -295px;
   background: #fff;
   opacity: 0.6;
+  z-index: 200;
 }
 .nav-search .search span {
   display: block;

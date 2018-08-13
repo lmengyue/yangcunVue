@@ -27,7 +27,7 @@
 .head-nav{
 	width:1200px;
 	margin:0 auto;
-	
+
 }
 .navbar-head .nav-head .login a {
   margin-left: 20px;
@@ -92,6 +92,14 @@
 }
 .navbar-head .nav-head ul .offset {
   margin-left: 42px;
+}
+.navbar-head .login-out button{
+  width: 30px;
+  background: transparent;
+  padding: 0;
+  color: #c8a063;
+  border: none;
+  cursor: pointer;
 }
 .footer-row{
 	width: 1200px;

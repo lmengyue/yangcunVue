@@ -30,7 +30,7 @@
 									<router-link to="/personalHome" >我的个人中心</router-link>
 								</span>
 									<span class="tt">|</span>
-									<span class="out">
+									<span class="login-out">
 									<button @click="removeLogin">退出</button>
 								</span>
 									<span class="order">
@@ -121,6 +121,7 @@
 
 <script>
 	import { localStor } from '../../utils/util'
+	import { getUrlParam } from '../../utils/common'
 	export default {
 		data() {
 			return {
@@ -130,6 +131,10 @@
 		beforeMount() {
 		    this.login = localStorage.login || 'no';
 		   console.log(localStor('get','login')) ;
+		   if(getUrlParam('code')){
+         this.login = '刘梦月';
+         localStor('set','login',this.login);
+       }
 		},
 		methods:{
 			removeLogin(){
