@@ -5,7 +5,7 @@
 				<div class="row clear">
 					<ul class="col-xs-2  fl">
 						<li class="activ">
-							<router-link to="/Activ" target="_parent">日常活动</router-link><span>></span></li>
+							<router-link to="/Activ" target="_parent">日常活动</router-link></li>
 						<li>
 							<router-link to="/Main" target="_parent">主力业态</router-link>
 						</li>
@@ -21,28 +21,28 @@
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 
 		</div>
 </template>
 
 <script>
-	
+
 	export default {
 		data() {
 			return {
 
 			}
 		},
-		
+
 	}
 </script>
 
 <style>
 	.activ-box {
   background: #f9f9f9;
-   
+
 }
 .activ-box .container{
 	width: 1200px;
@@ -81,10 +81,13 @@
   background: #c0996f;
 }
 .activ-box .row .col-xs-2 .activ {
-  background: #c0996f;
+
 }
-.activ-box .row .col-xs-2 .activ a {
-  margin-left: 24px;
+  .activ-box .fl .router-link-active{
+    background: #c0996f;
+  }
+.activ-box .row .col-xs-2 a {
+  width:100%;
 }
 .activ-box .row .col-xs-10 {
   padding: 0;

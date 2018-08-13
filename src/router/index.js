@@ -23,8 +23,8 @@ const Booking = () =>
 	import('@/view/booking/booking');
 const Gift = () =>
 	import('@/view/gift/gift');
-const Yuding = () =>
-	import('@/view/yuding/yuding');
+const Predetermine = () =>
+	import('@/view/predetermine/predetermine');
 const Order = () =>
 	import('@/view/order/order');
 const OrderOk = () =>
@@ -59,6 +59,10 @@ const Problem = () =>
 	import('@/view/about/problem');
 const Error = () =>
 	import('@/view/home/error');
+const News = () =>
+  import('@/view/news/news');
+const Life = () =>
+  import('@/view/news/life');
 Vue.use(Router)
 
 export default new Router({
@@ -90,6 +94,15 @@ export default new Router({
 						component: Show
 					}]
 				},
+        {
+          path: '/news',
+          component:News,
+          children:[{
+              path:'',
+            name:'life',
+            component:Life,
+          }]
+        },
 				{
 					path: '/res',
 					component: Res
@@ -99,8 +112,8 @@ export default new Router({
 					component: Booking
 				},
 				{
-					path: '/yuding',
-					component: Yuding
+					path: '/predetermine',
+					component:Predetermine
 				},
 				{
 					path: '/gift',

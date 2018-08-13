@@ -53,7 +53,7 @@
 											<router-link to="/gift">伴手选礼</router-link>
 										</li>
 										<li>
-											<router-link to="">新闻资讯</router-link>
+											<router-link to="/news">新闻资讯</router-link>
 										</li>
 									</ul>
 								</div>
@@ -69,7 +69,7 @@
 				<div class="row about-detail">
 					<ul class="col-xs-12 about-ul">
 						<li class="home">
-							<router-link to="/" target="_parent"></router-link>
+							<router-link to="/" ></router-link>
 						</li>
 						<li>></li>
 						<li>会员登录</li>
@@ -100,9 +100,6 @@
 									<router-link to="/findPass" target="_parent" class="so">忘记密码?</router-link>
 								</form>
 								<input type="submit" name=""
-									v-clipboard:copy="Url"
-									v-clipboard:success="onCopy"
-									v-clipboard:error="onError"
 									value="登录" class="sub" @click="sub" />
 
 								<p class="login-foot">

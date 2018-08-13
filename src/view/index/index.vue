@@ -54,7 +54,7 @@
 											<router-link to="/gift">伴手选礼</router-link>
 										</li>
 										<li>
-											<router-link to="">新闻资讯</router-link>
+											<router-link to="/news">新闻资讯</router-link>
 										</li>
 									</ul>
 								</div>
@@ -141,5 +141,10 @@
 </script>
 
 <style>
-
+.nav-li .router-link-exact-active{
+    border-bottom: 3px solid #7c5a25;
+  }
+.active{
+  border: none !important;
+}
 </style>

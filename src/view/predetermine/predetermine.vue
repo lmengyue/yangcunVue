@@ -67,7 +67,7 @@
 						<div style="text-align: center;">
 							<span class="fa fa-spinner fa-spin" style="display: none;font-size: 30px;"></span>
 						</div>
-						
+
 						<div class="Room-type-box">
 							<ul class="Room-type-nav">
 								<li></li>
@@ -123,10 +123,10 @@
 诗书为伴不觉人生寒。
 桃源一见寻，但期合意，不论风水，无关风月。
 春风一杯酒，襟怀高旷，此心安处是吾乡。
-美庐，等你回家。</pre>		
-										    
+美庐，等你回家。</pre>
+
 									</p>
-										
+
 									</td>
 								</tr>
 							</table>
@@ -138,7 +138,7 @@
 									<td class="jianjie-title">入离店时间</td>
 									<td class="text-list">入住时间：14:00以后	<span>  |  </span> 离店时间：12:00之前<span>  |  </span>儿童政策：不接受18岁以下客人单独入住。 </td>
 								</tr>
-							</table>	
+							</table>
 						</div>
 							 <hr style="width:1000px;margin: 20px auto;" />
 						<div class="shes">
@@ -198,7 +198,7 @@
 												<li>大堂吧</li>
 												<li>中央空调</li>
 												<li>公共音响系统 </li>
-										
+
 										     </ul>
 										</td>
 										</tr>
@@ -272,7 +272,7 @@
 										<p>我没有想说的其实 我喜欢现在的生活</p>
 									</div>
 								</td>
-							</tr>					
+							</tr>
 							</table>
 						</div>
 						<div class="dianpin-sub">
@@ -286,7 +286,7 @@
 							</ul>
 							<i>留言内容：（500字以内）</i>
 							<form class="sub">
-								<textarea id="ly"></textarea>
+								<textarea id="ly" v-model="liuyan"></textarea>
 								<input type="submit" value="确认，提交" onclick="sub()" />
 							</form>
 						</div>
@@ -305,7 +305,8 @@
 		data(){
 			return{
 				 value:'',
-				 f_type:''
+				 f_type:'',
+          liuyan:''
 			}
 		},
 		 created:function(){
@@ -318,7 +319,7 @@
 			yuding(){
 				console.log(this.value[0])
 				console.log(this.value[1])
-				
+
 			},
 			getHouse(){
 				fetch('post','user/Ft-type',{startDate:this.value[0],endDate:this.value[1]},(res)=>{
@@ -326,7 +327,7 @@
 					this.f_type=res.data;
 				})
 			}
-		 
+
 		}
 	}
 </script>

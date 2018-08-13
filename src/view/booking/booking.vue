@@ -10,9 +10,9 @@
 						<li>></li>
 						<li>民宿预订</li>
 					</ul>
-					
-					
-					<router-link to="/yuding" class="col-xs-12 booking-text ">
+
+
+					<router-link to="/Predetermine" class="col-xs-12 booking-text ">
 							<div class="col-xs-6 img">
 								<img src="../../../static/img/about/YC_booking_01.jpg"/>
 							</div>
@@ -25,9 +25,9 @@
 								   <b class="yuding">立即预订</b>
 								</div>
 							</div>
-						
+
 					</router-link>
-					<router-link to="/yuding" class="col-xs-12 booking-text">
+					<router-link to="/Predetermine" class="col-xs-12 booking-text">
 						<div  class="col-xs-6 img">
 							<img src="../../../static/img/about/YC_ml_02.jpg"/>
 						</div>
@@ -41,7 +41,7 @@
 							</div>
 						</div>
 					</router-link>
-					
+
 				</div>
 			</div>
 	</div>
@@ -52,10 +52,10 @@
 	export default{
 		data(){
 			return{
-				
+
 			}
 		},
-		
+
 	}
 </script>
 
@@ -190,7 +190,7 @@
   top: 0;
   width: 564px;
   display: none;
- 
+
 }
 .booking .row .mingkeli .mingkeli-box1-img .ltr {
   width: 560px;
